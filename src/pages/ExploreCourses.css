@@ -222,12 +222,22 @@
 }
 
 @media (max-width: 768px) {
+  .courses-hero-typographic {
+    padding: 2.5rem 1rem;
+    background-position: center !important;
+  }
+  
   .courses-title {
-    font-size: 3rem;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .courses-description {
+    font-size: 1.1rem;
   }
 
   .fw-course-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 
   .fw-course-container {

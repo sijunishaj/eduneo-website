@@ -356,11 +356,15 @@
 /* Responsive Overrides */
 @media (max-width: 968px) {
   .custom-about-hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
   }
   .custom-hero-left {
-    padding: 3rem 1.5rem;
+    padding: 1rem 1.5rem 4rem 1.5rem;
+  }
+  .custom-hero-right {
+    padding: 3rem 1.5rem 1rem 1.5rem;
+    width: 100%;
   }
   .mvg-minimal-grid {
     grid-template-columns: 1fr;
