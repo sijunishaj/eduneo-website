@@ -2,17 +2,17 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: #f4f6f8;
+  background-color: #ffffff; /* Plain white instead of grey */
   margin: 5rem 0;
 }
 
-/* Split Backgrounds */
+/* Split Backgrounds - Top colors restored */
 .pc-bg-top {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 55%;
+  height: 70%; /* Further increased color wrapper height */
   display: flex;
   z-index: 1;
 }
@@ -50,23 +50,16 @@
   transform: rotate(-15deg);
 }
 
+/* Remove only the grey bottom doodle background */
 .pc-bg-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 45%;
-  z-index: 1;
-  background-color: #f0f2f5;
-  /* Faint doodle pattern SVG to match image */
-  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.08'%3E%3Cpath d='M10 10h10v10H10zM50 50h10v10H50zM90 90h10v10H90z'/%3E%3Cpath d='M30 70h20v20H30zM70 30h20v20H70z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  display: none;
 }
 
 /* Content wrapper */
 .pc-content-wrapper {
   position: relative;
   z-index: 10;
-  padding: 4rem 0 4rem 0;
+  padding: 9rem 0 4rem 0; /* Significantly more space above the heading */
 }
 
 .pc-title {
@@ -162,25 +155,63 @@
 }
 
 @media (max-width: 768px) {
-  .pc-bg-top {
-    flex-direction: column;
+  .popular-classes-section {
+    background: #ffffff; /* Keep background plain white on mobile too */
+    margin: 3rem 0 1rem 0;
   }
-  .pc-cards-container {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    gap: 1.5rem;
+  
+  .pc-bg-top, .pc-bg-bottom {
+    display: none; /* Keep mobile background clean */
   }
+  
+  .pc-content-wrapper {
+    padding: 2rem 0 2rem 0; /* Fix the massive gap on mobile */
+  }
+  
   .pc-title {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
   }
+  
+  /* Full-bleed horizontal scroll */
+  .pc-cards-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.25rem;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    max-width: 100vw;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .pc-cards-container::-webkit-scrollbar {
+    display: none;
+  }
+
   .pc-card {
-    border: 1px solid rgba(0,0,0,0.06);
+    flex: 0 0 85%;
+    max-width: 320px;
+    scroll-snap-align: center;
+    border: 1px solid rgba(0,0,0,0.05); /* Light border */
     border-radius: 24px;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     padding: 2rem 1.5rem;
+    background: #ffffff;
   }
+
   .pc-divider {
-    height: 2px;
-    background-color: rgba(0,0,0,0.1);
+    height: 3px;
+    width: 50px;
+    border-radius: 4px;
+    background-color: #1a202c;
+    margin-top: 1rem;
+  }
+  
+  .pc-card-title {
+    font-size: 1.4rem;
   }
 }

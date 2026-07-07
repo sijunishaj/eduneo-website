@@ -1,7 +1,7 @@
 .subjects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .subject-card {
@@ -9,44 +9,74 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1.5rem;
-  background: white; /* Override glass */
+  padding: 2.5rem 1.5rem;
+  background: white; 
   text-align: center;
-  transition: all 0.3s ease;
+  border-radius: 40px; /* Modern Pill shape */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Background fill animation on hover */
+.subject-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(135deg, #1b4a83 0%, #3b82f6 100%);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: -1;
+  border-radius: 40px;
 }
 
 .subject-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--primary-light);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+.subject-card:hover::before {
+  height: 100%;
 }
 
 .subject-icon {
-  width: 60px;
-  height: 60px;
-  background: var(--bg-alt);
-  color: var(--primary-main);
+  width: 70px;
+  height: 70px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .subject-card:hover .subject-icon {
-  background: var(--gradient-primary);
-  color: white;
-  transform: scale(1.1);
+  background: white;
+  color: #3b82f6;
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .subject-icon svg {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
 }
 
 .subject-card h4 {
-  font-size: 1.1rem;
-  color: var(--text-main);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+.subject-card:hover h4 {
+  color: white;
 }

@@ -92,9 +92,10 @@
 @media (max-width: 992px) {
   .let-learning-card {
     flex-direction: column;
-    padding: 3rem;
+    padding: 3rem 2rem 0 2rem; /* Remove bottom padding so image sits flush */
     text-align: center;
     margin-top: 5rem;
+    overflow: hidden; /* Ensure image doesn't spill out bottom */
   }
   
   .ll-content {
@@ -113,27 +114,40 @@
   .ll-image-container {
     position: relative;
     right: 0;
-    height: 350px;
+    height: auto;
     width: 100%;
+    margin-bottom: -10px; /* Counteract any stray bottom spacing */
   }
   
-  
   .ll-image {
-    max-height: 350px;
+    max-height: 320px;
+    object-position: bottom;
   }
 }
 
 @media (max-width: 768px) {
+  .let-learning-card {
+    padding: 2.5rem 1.5rem 0 1.5rem;
+    border-radius: 1.5rem;
+  }
+
   .ll-content h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
   }
   
   .ll-content p {
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
   
   .btn-yellow {
     padding: 1rem 1.5rem;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    width: 100%; /* Full width button on small mobile */
+  }
+
+  .ll-image {
+    max-height: 280px;
   }
 }

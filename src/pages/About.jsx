@@ -1,5 +1,6 @@
 import React from 'react';
 import { Target, Lightbulb, Heart, Shield, Award, Calendar, Users, CheckCircle, Mail, Globe, Sparkles, BookOpen, GraduationCap, Pencil, Calculator } from 'lucide-react';
+import ScrollReveal from '../components/ScrollReveal';
 import './About.css';
 
 const About = () => {
@@ -70,85 +71,89 @@ const About = () => {
       </section>
 
       {/* Mission, Vision, Values Minimal Grid */}
-      <section className="mvg-minimal-section">
-        <div className="container">
-          <div className="mvg-minimal-grid">
-            <div className="mvg-minimal-card">
-              <h3>Mission</h3>
-              <p>To make premium education accessible, interactive, and personalized for every student, regardless of their grade or syllabus.</p>
-            </div>
-            <div className="mvg-minimal-card">
-              <h3>Vision</h3>
-              <p>To lead the future of digital education, nurturing creative, analytical, and confident thinkers who are globally competitive.</p>
-            </div>
-            <div className="mvg-minimal-card">
-              <h3>Values</h3>
-              <p>Excellence, Integrity, Innovation, Empathy, and a relentless devotion to continuous student improvement.</p>
+      <ScrollReveal direction="up" delay={0.1}>
+        <section className="mvg-minimal-section">
+          <div className="container">
+            <div className="mvg-minimal-grid">
+              <div className="mvg-minimal-card">
+                <h3>Mission</h3>
+                <p>To make premium education accessible, interactive, and personalized for every student, regardless of their grade or syllabus.</p>
+              </div>
+              <div className="mvg-minimal-card">
+                <h3>Vision</h3>
+                <p>To lead the future of digital education, nurturing creative, analytical, and confident thinkers who are globally competitive.</p>
+              </div>
+              <div className="mvg-minimal-card">
+                <h3>Values</h3>
+                <p>Excellence, Integrity, Innovation, Empathy, and a relentless devotion to continuous student improvement.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
 
 
       {/* Why Parents Trust Us (Light Premium Redesign) */}
-      <section className="trust-section-light">
-        <div className="container">
-          
-          {/* Top Horizontal Stats Banner */}
-          <div className="trust-stats-horizontal-light">
-             <div className="stat-item-light">
-                <div className="stat-number-light text-yellow">98%</div>
-                <div className="stat-label-light">Satisfaction Rate</div>
-             </div>
-             <div className="stat-item-light">
-                <div className="stat-number-light text-orange">10k+</div>
-                <div className="stat-label-light">Active Students</div>
-             </div>
-             <div className="stat-item-light">
-                <div className="stat-number-light text-blue-light">1-on-1</div>
-                <div className="stat-label-light">Mentorship Option</div>
-             </div>
-             <div className="stat-item-light">
-                <div className="stat-number-light text-green">100%</div>
-                <div className="stat-label-light">Syllabus Covered</div>
-             </div>
-          </div>
+      <ScrollReveal direction="up" delay={0.2}>
+        <section className="trust-section-light">
+          <div className="container">
+            
+            {/* Top Horizontal Stats Banner */}
+            <div className="trust-stats-horizontal-light">
+               <div className="stat-item-light">
+                  <div className="stat-number-light text-yellow">98%</div>
+                  <div className="stat-label-light">Satisfaction Rate</div>
+               </div>
+               <div className="stat-item-light">
+                  <div className="stat-number-light text-orange">10k+</div>
+                  <div className="stat-label-light">Active Students</div>
+               </div>
+               <div className="stat-item-light">
+                  <div className="stat-number-light text-blue-light">1-on-1</div>
+                  <div className="stat-label-light">Mentorship Option</div>
+               </div>
+               <div className="stat-item-light">
+                  <div className="stat-number-light text-green">100%</div>
+                  <div className="stat-label-light">Syllabus Covered</div>
+               </div>
+            </div>
 
-          <div className="trust-header-light text-center">
-            <h2>Why Parents Trust <span className="text-highlight">EduNeo</span></h2>
-            <p>Choosing the right platform shapes a student's entire foundation. Here is why thousands confidently choose us:</p>
-          </div>
-          
-          {/* Bottom 3-Column Feature Grid */}
-          <div className="trust-features-grid-light">
-            <div className="trust-feature-card-light">
-              <div className="trust-icon-wrapper-light bg-blue-glow">
-                <CheckCircle size={28} color="#55a8e0" />
-              </div>
-              <h4>Verified Faculty</h4>
-              <p>Strict academic and background screening ensures your child learns only from top-tier educators.</p>
+            <div className="trust-header-light text-center">
+              <h2>Why Parents Trust <span className="text-highlight">EduNeo</span></h2>
+              <p>Choosing the right platform shapes a student's entire foundation. Here is why thousands confidently choose us:</p>
             </div>
             
-            <div className="trust-feature-card-light">
-              <div className="trust-icon-wrapper-light bg-orange-glow">
-                <CheckCircle size={28} color="#e7612f" />
+            {/* Bottom 3-Column Feature Grid */}
+            <div className="trust-features-grid-light">
+              <div className="trust-feature-card-light">
+                <div className="trust-icon-wrapper-light bg-blue-glow">
+                  <CheckCircle size={28} color="#55a8e0" />
+                </div>
+                <h4>Verified Faculty</h4>
+                <p>Strict academic and background screening ensures your child learns only from top-tier educators.</p>
               </div>
-              <h4>Progress Dashboards</h4>
-              <p>Get instant, transparent insight into grades, attendance, and overall performance in real-time.</p>
-            </div>
-            
-            <div className="trust-feature-card-light">
-              <div className="trust-icon-wrapper-light bg-yellow-glow">
-                <CheckCircle size={28} color="#f7cd55" />
+              
+              <div className="trust-feature-card-light">
+                <div className="trust-icon-wrapper-light bg-orange-glow">
+                  <CheckCircle size={28} color="#e7612f" />
+                </div>
+                <h4>Progress Dashboards</h4>
+                <p>Get instant, transparent insight into grades, attendance, and overall performance in real-time.</p>
               </div>
-              <h4>Active PTM Frameworks</h4>
-              <p>Regular parent-teacher meetings ensure complete alignment to resolve any academic gaps quickly.</p>
+              
+              <div className="trust-feature-card-light">
+                <div className="trust-icon-wrapper-light bg-yellow-glow">
+                  <CheckCircle size={28} color="#f7cd55" />
+                </div>
+                <h4>Active PTM Frameworks</h4>
+                <p>Regular parent-teacher meetings ensure complete alignment to resolve any academic gaps quickly.</p>
+              </div>
             </div>
-          </div>
 
-        </div>
-      </section>
+          </div>
+        </section>
+      </ScrollReveal>
     </div>
   );
 };

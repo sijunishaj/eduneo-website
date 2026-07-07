@@ -7,6 +7,7 @@ import LetLearningBanner from '../components/LetLearningBanner';
 import PopularClasses from '../components/PopularClasses';
 import CreativeTestimonials from '../components/CreativeTestimonials';
 import ScholarshipCarousel from '../components/ScholarshipCarousel';
+import ScrollReveal from '../components/ScrollReveal';
 import './Home.css';
 
 const Home = () => {
@@ -17,8 +18,8 @@ const Home = () => {
         <div className="hero-left">
           <div className="hero-left-content">
             <h1 className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              Empowering<br/>
-              Students to<br/>
+              Empowering<br />
+              Students to<br />
               Achieve Excellence.
             </h1>
             <p className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
@@ -33,7 +34,7 @@ const Home = () => {
               </svg>
             </div>
           </div>
-          
+
           {/* Decorative floating elements */}
           <div className="decor-circle decor-1"></div>
           <div className="decor-circle decor-2"></div>
@@ -49,62 +50,78 @@ const Home = () => {
             <div className="shape darkblue-chevron"></div>
           </div>
           <img src="/eduneo-heroimage.png" alt="Student" className="hero-student-img" />
-          
+
         </div>
       </section>
 
-      <ScholarshipCarousel />
+      <ScrollReveal direction="up" delay={0.1}>
+        <ScholarshipCarousel />
+      </ScrollReveal>
 
-      <AboutEduNeo />
-      <ClassesProvided />
-      <PopularClasses />
-      <LetLearningBanner />
+      <ScrollReveal direction="up">
+        <AboutEduNeo />
+      </ScrollReveal>
+      
+      <ScrollReveal direction="up">
+        <ClassesProvided />
+      </ScrollReveal>
+      
+      <ScrollReveal direction="up">
+        <PopularClasses />
+      </ScrollReveal>
+      
+      <ScrollReveal direction="fade" delay={0.2}>
+        <LetLearningBanner />
+      </ScrollReveal>
 
 
-      {/* Learning Journey */}
-      <section className="journey-section section">
-        <div className="container relative z-10">
-          <div className="section-header text-center">
-            <h2 className="journey-title">The Eduneo <span>Learning Journey</span></h2>
-            <p className="journey-subtitle">A structured path from enrollment to academic success.</p>
+      <ScrollReveal direction="up">
+        {/* Learning Journey */}
+        <section className="journey-section section">
+          <div className="container relative z-10">
+            <div className="section-header text-center">
+              <h2 className="journey-title">The Eduneo <span>Learning Journey</span></h2>
+              <p className="journey-subtitle">A structured path from enrollment to academic success.</p>
+            </div>
+
+            <div className="journey-timeline mt-4">
+              <div className="journey-step">
+                <div className="step-number">1</div>
+                <h4>Register</h4>
+              </div>
+              <div className="journey-connector"></div>
+              <div className="journey-step">
+                <div className="step-number">2</div>
+                <h4>Choose Class</h4>
+              </div>
+              <div className="journey-connector"></div>
+              <div className="journey-step">
+                <div className="step-number">3</div>
+                <h4>Live Classes</h4>
+              </div>
+              <div className="journey-connector"></div>
+              <div className="journey-step">
+                <div className="step-number">4</div>
+                <h4>Practice</h4>
+              </div>
+              <div className="journey-connector"></div>
+              <div className="journey-step">
+                <div className="step-number">5</div>
+                <h4>Assessments</h4>
+              </div>
+              <div className="journey-connector"></div>
+              <div className="journey-step">
+                <div className="step-number">6</div>
+                <h4>Success</h4>
+              </div>
+            </div>
           </div>
-          
-          <div className="journey-timeline mt-4">
-            <div className="journey-step">
-              <div className="step-number">1</div>
-              <h4>Register</h4>
-            </div>
-            <div className="journey-connector"></div>
-            <div className="journey-step">
-              <div className="step-number">2</div>
-              <h4>Choose Class</h4>
-            </div>
-            <div className="journey-connector"></div>
-            <div className="journey-step">
-              <div className="step-number">3</div>
-              <h4>Live Classes</h4>
-            </div>
-            <div className="journey-connector"></div>
-            <div className="journey-step">
-              <div className="step-number">4</div>
-              <h4>Practice</h4>
-            </div>
-            <div className="journey-connector"></div>
-            <div className="journey-step">
-              <div className="step-number">5</div>
-              <h4>Assessments</h4>
-            </div>
-            <div className="journey-connector"></div>
-            <div className="journey-step">
-              <div className="step-number">6</div>
-              <h4>Success</h4>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
-
-      <CreativeTestimonials />
+      <ScrollReveal direction="fade">
+        <CreativeTestimonials />
+      </ScrollReveal>
 
     </div>
   );

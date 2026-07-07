@@ -27,13 +27,13 @@ const AboutEduNeo = () => {
     <section className="about-eduneo-section">
       <div className="container mx-auto px-4">
         <div className="about-grid">
-          
+
           {/* Left Side: Winding Icon Path */}
           <div className="icon-path-container">
             <svg className="winding-path-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
               <path d="M 12.5 12.5 L 87.5 12.5 A 12.5 12.5 0 0 1 100 25 L 100 25 A 12.5 12.5 0 0 1 87.5 37.5 L 12.5 37.5 A 12.5 12.5 0 0 0 0 50 L 0 50 A 12.5 12.5 0 0 0 12.5 62.5 L 87.5 62.5 A 12.5 12.5 0 0 1 100 75 L 100 75 A 12.5 12.5 0 0 1 87.5 87.5 L 12.5 87.5" fill="none" stroke="#2d4a36" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            
+
             <div className="icons-grid-4x4">
               {icons.map((item, index) => {
                 // To match the snake path visually, row 2 and 4 should be reversed in layout
@@ -57,20 +57,20 @@ const AboutEduNeo = () => {
             <p className="about-subheading">
               A trusted online learning platform dedicated to providing quality education for every student.
             </p>
-            
+
             <p className="about-text">
               We offer comprehensive online tuition classes for students from LKG, UKG, and Grades 1–12, covering both Kerala State Syllabus and CBSE Syllabus.
             </p>
-            
+
             <p className="about-text">
               At Edu Neo, we carefully select highly qualified and experienced teachers to ensure the best learning experience for our students. Along with expert teaching, every student receives dedicated mentor support, helping them stay motivated, focused, and confident throughout their academic journey.
             </p>
-            
+
             <p className="about-text">
               Our classes are conducted as live interactive sessions, allowing students to actively participate, ask questions, and engage with teachers in real time. We provide both One-Teacher Programs and Batch-Wise Classes, enabling students to choose the learning method that suits them best.
             </p>
 
-            <Link to="/contact" className="book-trial-btn" style={{display: 'inline-block', textAlign: 'center'}}>BOOK YOUR FREE TRIAL</Link>
+            <Link to="/contact" className="book-trial-btn" style={{ display: 'inline-block', textAlign: 'center' }}>BOOK YOUR FREE TRIAL</Link>
           </div>
         </div>
       </div>

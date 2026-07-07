@@ -20,7 +20,7 @@ const ClassesProvided = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="cp-header text-center">
-          <h2><span className="text-highlight">Eduneo</span> Provides...!</h2>
+          <h2>Learning Pathways</h2>
           <p className="cp-subtitle">Comprehensive classes tailored for every stage of your academic journey.</p>
         </div>
         
@@ -36,10 +36,9 @@ const ClassesProvided = () => {
           <div className="cp-quote-free">
             <div className="quote-accent-shape"></div>
             <div className="quote-text-wrap">
-              <p className="cp-quote">
-                "Education opens doors,<br/>
-                but curiosity leads you<br/>
-                through them."
+              <p className="cp-quote" style={{ fontSize: '1.25rem', lineHeight: '1.6' }}>
+                "Learning gives creativity, creativity leads to thinking, thinking provides knowledge, and knowledge makes you great."<br/><br/>
+                <span style={{ display: 'block', textAlign: 'right', fontSize: '0.9rem', opacity: 0.8 }}>— A. P. J. Abdul Kalam</span>
               </p>
             </div>
           </div>

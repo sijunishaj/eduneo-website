@@ -18,9 +18,11 @@ const VirtualClassFeatures = () => {
         
         <div className="vc-grid">
           {features.map((feature, idx) => (
-            <div key={idx} className="vc-card glass-card animate-slide-up" style={{ animationDelay: `${idx * 0.1}s` }}>
-              <div className="vc-icon">
-                {feature.icon}
+            <div key={idx} className={`vc-card glass-card animate-slide-up vc-card-${idx}`} style={{ animationDelay: `${idx * 0.1}s` }}>
+              <div className="vc-icon-pulse">
+                <div className="vc-icon">
+                  {feature.icon}
+                </div>
               </div>
               <h3>{feature.title}</h3>
               <p>{feature.desc}</p>

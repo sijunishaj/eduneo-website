@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollReveal from '../components/ScrollReveal';
 import './ExploreCourses.css';
 
 const ExploreCourses = () => {
@@ -19,25 +20,52 @@ const ExploreCourses = () => {
       </div>
 
       {/* Hero Section */}
-      <section 
-        className="courses-hero-typographic"
-        style={{
-          backgroundImage: `url('/courses-hero')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="container">
-          <div className="courses-hero-content">
-            <span className="courses-subtitle">Our Programs</span>
-            <h1 className="courses-title">Explore Courses At Eduneo</h1>
-            <p className="courses-description">
-              AI + Human powered soft skills and academic programs designed to unlock student potential across all levels.
-            </p>
+      <ScrollReveal direction="fade">
+        <section 
+          className="courses-hero-typographic"
+          style={{ position: 'relative', overflow: 'hidden' }}
+        >
+          {/* Background Video */}
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              zIndex: 0
+            }}
+          >
+            <source src="/couses hero.mp4" type="video/mp4" />
+          </video>
+          
+          {/* Dark Overlay for Text Readability */}
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(0,0,0,0.5)',
+            zIndex: 1
+          }}></div>
+
+          <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+            <div className="courses-hero-content">
+              <span className="courses-subtitle">Our Programs</span>
+              <h1 className="courses-title">Explore Courses At Eduneo</h1>
+              <p className="courses-description">
+                AI + Human powered soft skills and academic programs designed to unlock student potential across all levels.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       {/* Animated Marquee Line */}
       <div className="courses-marquee-container">
@@ -65,115 +93,111 @@ const ExploreCourses = () => {
         </div>
       </div>
 
-      {/* Full-Width Courses Section */}
-      <div className="fw-courses-wrapper">
+      {/* Core Programs Grid Section */}
+      <div className="core-programs-wrapper">
         <div className="container">
-          <div className="fw-courses-header">
+          <div className="core-programs-header">
             <h2>Our Core Programs</h2>
             <p>Comprehensive learning paths designed for academic excellence.</p>
           </div>
+
+          <div className="core-creative-grid">
+            {/* Course 1 */}
+            <ScrollReveal direction="up" delay={0.1}>
+              <div className="core-creative-card">
+                <div className="core-card-number">01</div>
+                <div className="core-card-content">
+                  <h3 className="core-creative-title text-dark">KG to Plus Two Tuition</h3>
+                  <div className="core-course-divider bg-blue"></div>
+                  <p className="core-creative-desc text-muted">
+                    Comprehensive tuition classes covering all subjects from Kindergarten through Higher Secondary levels. We focus on building a robust academic foundation.
+                  </p>
+                  <ul className="core-creative-features text-muted">
+                    <li>Syllabus-aligned curriculum</li>
+                    <li>In-depth conceptual clarity</li>
+                    <li>Regular performance tracking</li>
+                  </ul>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Course 2 */}
+            <ScrollReveal direction="up" delay={0.2}>
+              <div className="core-creative-card">
+                <div className="core-card-number">02</div>
+                <div className="core-card-content">
+                  <h3 className="core-creative-title text-dark">One Teacher Program</h3>
+                  <div className="core-course-divider bg-orange"></div>
+                  <p className="core-creative-desc text-muted">
+                    Experience unparalleled personalized attention with a dedicated mentor. This program assigns a single expert teacher to guide the student.
+                  </p>
+                  <ul className="core-creative-features text-muted">
+                    <li>1-on-1 personalized mentorship</li>
+                    <li>Customized learning pace</li>
+                    <li>Immediate doubt resolution</li>
+                  </ul>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Course 3 */}
+            <ScrollReveal direction="up" delay={0.3}>
+              <div className="core-creative-card">
+                <div className="core-card-number">03</div>
+                <div className="core-card-content">
+                  <h3 className="core-creative-title text-dark">Batch Wise Classes</h3>
+                  <div className="core-course-divider bg-yellow"></div>
+                  <p className="core-creative-desc text-muted">
+                    Engage in structured batch learning to encourage peer interaction, healthy competition, and teamwork while maintaining a highly focused learning environment.
+                  </p>
+                  <ul className="core-creative-features text-muted">
+                    <li>Peer-to-peer learning</li>
+                    <li>Small batch sizes</li>
+                    <li>Structured group discussions</li>
+                  </ul>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Course 4 */}
+            <ScrollReveal direction="up" delay={0.1}>
+              <div className="core-creative-card">
+                <div className="core-card-number">04</div>
+                <div className="core-card-content">
+                  <h3 className="core-creative-title text-dark">Exam Oriented Prep</h3>
+                  <div className="core-course-divider bg-green"></div>
+                  <p className="core-creative-desc text-muted">
+                    Targeted coaching strategies specifically designed to help students excel in board exams and competitive tests. We prioritize score optimization.
+                  </p>
+                  <ul className="core-creative-features text-muted">
+                    <li>Extensive mock tests</li>
+                    <li>Advanced time management</li>
+                    <li>Detailed performance analytics</li>
+                  </ul>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* Course 5 */}
+            <ScrollReveal direction="up" delay={0.2}>
+              <div className="core-creative-card">
+                <div className="core-card-number">05</div>
+                <div className="core-card-content">
+                  <h3 className="core-creative-title text-dark">7 Days Revision Classes</h3>
+                  <div className="core-course-divider bg-dark"></div>
+                  <p className="core-creative-desc text-muted">
+                    Intensive, short-term revision sessions designed to quickly consolidate key concepts right before the exams. Maximize confidence in just one week.
+                  </p>
+                  <ul className="core-creative-features text-muted">
+                    <li>Rapid syllabus coverage</li>
+                    <li>Focus on high-weightage topics</li>
+                    <li>Last-minute doubt clearance</li>
+                  </ul>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
-
-        {/* Course 1 */}
-        <section className="fw-course-section bg-white border-top-blue">
-          <div className="container fw-course-container">
-            <div className="fw-course-left">
-              <h3 className="fw-course-title">KG to Plus Two Tuition</h3>
-              <div className="fw-course-divider bg-blue"></div>
-            </div>
-            <div className="fw-course-right">
-              <p className="fw-course-desc">
-                Comprehensive tuition classes covering all subjects from Kindergarten through Higher Secondary levels. We focus on building a robust academic foundation that grows with the student, ensuring no conceptual gaps remain.
-              </p>
-              <ul className="fw-course-features">
-                <li>Syllabus-aligned curriculum</li>
-                <li>In-depth conceptual clarity</li>
-                <li>Regular performance tracking</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Course 2 */}
-        <section className="fw-course-section bg-light-gray border-top-orange">
-          <div className="container fw-course-container">
-            <div className="fw-course-left">
-              <h3 className="fw-course-title">One Teacher Program</h3>
-              <div className="fw-course-divider bg-orange"></div>
-            </div>
-            <div className="fw-course-right">
-              <p className="fw-course-desc">
-                Experience unparalleled personalized attention with a dedicated mentor. This program assigns a single expert teacher to guide the student through their entire academic journey, adapting completely to the student's pace.
-              </p>
-              <ul className="fw-course-features">
-                <li>1-on-1 personalized mentorship</li>
-                <li>Customized learning pace</li>
-                <li>Immediate doubt resolution</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Course 3 */}
-        <section className="fw-course-section bg-white border-top-yellow">
-          <div className="container fw-course-container">
-            <div className="fw-course-left">
-              <h3 className="fw-course-title">Batch Wise Classes</h3>
-              <div className="fw-course-divider bg-yellow"></div>
-            </div>
-            <div className="fw-course-right">
-              <p className="fw-course-desc">
-                Engage in structured batch learning to encourage peer interaction, healthy competition, and teamwork while maintaining a highly focused learning environment with optimal student-to-teacher ratios.
-              </p>
-              <ul className="fw-course-features">
-                <li>Peer-to-peer learning</li>
-                <li>Small batch sizes</li>
-                <li>Structured group discussions</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Course 4 */}
-        <section className="fw-course-section bg-light-gray border-top-green">
-          <div className="container fw-course-container">
-            <div className="fw-course-left">
-              <h3 className="fw-course-title">Exam Oriented Preparation</h3>
-              <div className="fw-course-divider bg-green"></div>
-            </div>
-            <div className="fw-course-right">
-              <p className="fw-course-desc">
-                Targeted coaching strategies specifically designed to help students excel in board exams and competitive tests. We prioritize score optimization, time management, and rigorous testing patterns.
-              </p>
-              <ul className="fw-course-features">
-                <li>Extensive mock tests</li>
-                <li>Advanced time management</li>
-                <li>Detailed performance analytics</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Course 5 */}
-        <section className="fw-course-section bg-white border-top-dark">
-          <div className="container fw-course-container">
-            <div className="fw-course-left">
-              <h3 className="fw-course-title">7 Days Revision Classes</h3>
-              <div className="fw-course-divider bg-dark"></div>
-            </div>
-            <div className="fw-course-right">
-              <p className="fw-course-desc">
-                Intensive, short-term revision sessions designed to quickly consolidate key concepts right before the exams. Maximize confidence, recallability, and preparedness in just one week.
-              </p>
-              <ul className="fw-course-features">
-                <li>Rapid syllabus coverage</li>
-                <li>Focus on high-weightage topics</li>
-                <li>Last-minute doubt clearance</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
       </div>
     </div>
   );

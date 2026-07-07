@@ -1,36 +1,63 @@
 import React from 'react';
+import { User } from 'lucide-react';
 import './CreativeTestimonials.css';
 
 const testimonialsData = [
   {
     id: 1,
-    name: 'AARAV',
-    age: '10TH GRADE',
-    location: 'INDIA',
-    title: 'TOP SCORER',
-    subtitle: 'BOARD EXAMS',
-    image: 'https://images.unsplash.com/photo-1599839619722-39751411ea63?auto=format&fit=crop&w=200&q=80',
+    name: 'Amina Rahman',
+    stars: '⭐⭐⭐⭐⭐',
+    quote: "EduNeo has completely changed my daughter's approach to learning. The teachers explain every topic patiently, and the mentor support keeps her motivated throughout the week.",
     colorClass: 'bg-red'
   },
   {
     id: 2,
-    name: 'SHANVI',
-    age: '8TH GRADE',
-    location: 'INDIA',
-    title: 'MATH GENIUS',
-    subtitle: 'OLYMPIAD WINNER',
-    image: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=200&q=80', 
+    name: 'Arjun Nair',
+    stars: '⭐⭐⭐⭐⭐',
+    quote: "The live interactive classes are engaging, and the recorded sessions help me revise whenever I need. My confidence in Mathematics has improved a lot.",
     colorClass: 'bg-blue'
   },
   {
     id: 3,
-    name: 'MEERA',
-    age: '12TH GRADE',
-    location: 'INDIA',
-    title: 'ENTRANCE PRO',
-    subtitle: 'NEET CRACKER',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
+    name: 'Fathima Shirin',
+    stars: '⭐⭐⭐⭐⭐',
+    quote: "The weekly tests and detailed performance reports helped my son identify his weak areas. We are very satisfied with the quality of teaching.",
     colorClass: 'bg-yellow'
+  },
+  {
+    id: 4,
+    name: 'Muhammed Riyas',
+    stars: '⭐⭐⭐⭐⭐',
+    quote: "EduNeo provides a perfect balance of discipline and encouragement. The teachers are friendly, knowledgeable, and always ready to clear doubts.",
+    colorClass: 'bg-red'
+  },
+  {
+    id: 5,
+    name: 'Diya Thomas',
+    stars: '⭐⭐⭐⭐⭐',
+    quote: "I joined EduNeo for Science and English classes. The explanations are simple, the study materials are excellent, and learning has become enjoyable.",
+    colorClass: 'bg-blue'
+  },
+  {
+    id: 6,
+    name: 'Nikhil Menon',
+    stars: '⭐⭐⭐⭐⭐',
+    quote: "The mentor support is one of the best features of EduNeo. Regular follow-ups and personal guidance have helped me stay consistent with my studies.",
+    colorClass: 'bg-yellow'
+  },
+  {
+    id: 7,
+    name: 'Safa Mariyam',
+    stars: '⭐⭐⭐⭐⭐',
+    quote: "As a parent, I appreciate the regular communication and progress updates. EduNeo truly cares about every student's success.",
+    colorClass: 'bg-red'
+  },
+  {
+    id: 8,
+    name: 'Aditya Krishnan',
+    stars: '⭐⭐⭐⭐⭐',
+    quote: "The classes are well organized, teachers are highly experienced, and the learning environment is positive. I would definitely recommend EduNeo to other students.",
+    colorClass: 'bg-blue'
   }
 ];
 
@@ -43,28 +70,55 @@ const CreativeTestimonials = () => {
             <h2>Our Superstars</h2>
           </div>
           <div className="ts-desc-col">
-            <p>We use communication skills and confidence building exercises to unlock the superstar potential inside you.</p>
+            <p>See what parents and students are saying about their experience with EduNeo's personalized learning programs.</p>
           </div>
         </div>
 
-        <div className="ts-cards-container">
-          {testimonialsData.map((t) => (
-            <div key={t.id} className="ts-card">
-              <div className={`ts-avatar-wrapper ${t.colorClass}`}>
-                <img src={t.image} alt={t.name} className="ts-avatar" />
-              </div>
-              <div className="ts-info">
-                <div className="ts-info-top">
-                  <h4 className="ts-name">{t.name}</h4>
-                  <span className="ts-demographics">{t.age}<br/>{t.location}</span>
+        <div className="ts-marquee-container">
+          <div className="ts-marquee-track">
+            {/* First set */}
+            <div className="ts-marquee-content">
+              {testimonialsData.map((t) => (
+                <div key={t.id} className="ts-card">
+                  <div className={`ts-avatar-wrapper ${t.colorClass}`}>
+                    <User size={64} color="white" strokeWidth={1.5} />
+                  </div>
+                  <div className="ts-info">
+                    <div className="ts-info-top" style={{ gap: '0.25rem' }}>
+                      <h4 className="ts-name" style={{ textTransform: 'capitalize' }}>{t.name}</h4>
+                      <span className="ts-demographics" style={{ color: '#f1b308', fontSize: '0.8rem', letterSpacing: '2px' }}>{t.stars}</span>
+                    </div>
+                    <div className="ts-info-bottom">
+                      <p style={{ fontStyle: 'italic', fontSize: '0.9rem', color: '#4a5568', lineHeight: 1.5, margin: 0 }}>
+                        "{t.quote}"
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="ts-info-bottom">
-                  <h3 className="ts-title">{t.title}</h3>
-                  <span className="ts-subtitle">{t.subtitle}</span>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+            {/* Second set for infinite looping */}
+            <div className="ts-marquee-content" aria-hidden="true">
+              {testimonialsData.map((t) => (
+                <div key={t.id + '-dup'} className="ts-card">
+                  <div className={`ts-avatar-wrapper ${t.colorClass}`}>
+                    <User size={64} color="white" strokeWidth={1.5} />
+                  </div>
+                  <div className="ts-info">
+                    <div className="ts-info-top" style={{ gap: '0.25rem' }}>
+                      <h4 className="ts-name" style={{ textTransform: 'capitalize' }}>{t.name}</h4>
+                      <span className="ts-demographics" style={{ color: '#f1b308', fontSize: '0.8rem', letterSpacing: '2px' }}>{t.stars}</span>
+                    </div>
+                    <div className="ts-info-bottom">
+                      <p style={{ fontStyle: 'italic', fontSize: '0.9rem', color: '#4a5568', lineHeight: 1.5, margin: 0 }}>
+                        "{t.quote}"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

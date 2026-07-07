@@ -10,9 +10,9 @@ const Hero = () => {
         <source src="/Video-hero.mp4" type="video/mp4" />
       </video>
       <div className="hero-overlay"></div>
-      
+
       <div className="container hero-container">
-        
+
         <div className="hero-content animate-slide-up">
           <div className="hero-badge">
             <Sparkles size={16} /> <span>#1 Online Tuition Platform</span>
@@ -22,14 +22,14 @@ const Hero = () => {
             Live interactive classes for LKG to Grade 12. Expert teachers, dedicated mentor support, and flexible batch options tailored to your child's success.
           </p>
           <div className="hero-ctas">
-            <Link to="/contact" className="btn-modern btn-primary" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+            <Link to="/contact" className="btn-modern btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
               Book Your Free Trial <ChevronRight size={18} />
             </Link>
-            <Link to="/courses" className="btn-modern btn-white" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>
+            <Link to="/courses" className="btn-modern btn-white" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
               Explore Courses
             </Link>
           </div>
-          
+
           <div className="hero-trust">
             <div className="trust-avatars">
               <div className="avatar">JD</div>
@@ -43,9 +43,9 @@ const Hero = () => {
         <div className="hero-graphics animate-slide-up" style={{ animationDelay: '0.2s' }}>
           <div className="glass-card hero-glass-card">
             <div className="circle-image main-circle">
-              <div className="placeholder-kid" style={{backgroundImage: "url('/hero-img-1.png')"}}></div>
+              <div className="placeholder-kid" style={{ backgroundImage: "url('/hero-img-1.png')" }}></div>
             </div>
-            
+
             {/* Floating icons */}
             <div className="floating-badge badge-1 glass-card">
               <Star className="text-yellow" size={24} />
@@ -54,7 +54,7 @@ const Hero = () => {
                 <span>Parent Rating</span>
               </div>
             </div>
-            
+
             <div className="floating-badge badge-2 glass-card">
               <BookOpen className="text-blue" size={24} />
               <div>

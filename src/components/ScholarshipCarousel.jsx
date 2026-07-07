@@ -2,8 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './ScholarshipCarousel.css';
 
 const banners = [
-  '/scholarship-banner-2.png',
-  '/scholarship-banner-3.png'
+  {
+    desktop: '/scholarship-banner-2.png',
+    mobile: '/mobile-scholarship-banner-1.png'
+  },
+  {
+    desktop: '/scholarship-banner-3.png',
+    mobile: '/mobile-scholarship-banner-2.png'
+  }
 ];
 
 const ScholarshipCarousel = () => {
@@ -29,7 +35,10 @@ const ScholarshipCarousel = () => {
       >
         {banners.map((banner, index) => (
           <div className="scholarship-slide" key={index}>
-            <img src={banner} alt={`Scholarship Banner ${index + 1}`} className="scholarship-img" />
+            <picture>
+              <source media="(max-width: 768px)" srcSet={banner.mobile} />
+              <img src={banner.desktop} alt={`Scholarship Banner ${index + 1}`} className="scholarship-img" />
+            </picture>
           </div>
         ))}
       </div>

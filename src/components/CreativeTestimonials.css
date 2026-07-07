@@ -40,27 +40,49 @@
   max-width: 600px;
 }
 
-.ts-cards-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.ts-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0 2rem 0; /* padding for drop shadows */
+}
+
+.ts-marquee-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+.ts-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.ts-marquee-content {
+  display: flex;
   gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  padding-right: 1.5rem; /* Gap between the two sets */
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .ts-card {
+  width: 400px; /* fixed width for cards in moving marquee */
+  flex-shrink: 0;
   background: white;
   border-radius: 1.5rem;
   padding: 2rem 1.5rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.02);
 }
 
 .ts-avatar-wrapper {
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -72,6 +94,9 @@
 .bg-red { background-color: #e94b59; }
 .bg-blue { background-color: #2b84c8; }
 .bg-yellow { background-color: #f1b308; }
+.bg-green { background-color: #67a775; }
+.bg-purple { background-color: #9c6cce; }
+.bg-orange { background-color: #f79c42; }
 
 .ts-avatar {
   width: 100%;
@@ -85,7 +110,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.5rem; /* Gap between top and bottom text groups */
+  gap: 1rem;
 }
 
 .ts-info-top, .ts-info-bottom {
@@ -124,10 +149,6 @@
 }
 
 @media (max-width: 992px) {
-  .ts-cards-container {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-  }
   .ts-header {
     flex-direction: column;
     text-align: center;
@@ -135,5 +156,34 @@
   .ts-title-col {
     text-align: center;
     padding-right: 0;
+  }
+  .ts-card {
+    flex: 0 0 calc(50% - 0.75rem); /* 2 cards on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .ts-marquee-container {
+    max-width: 100vw;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+  }
+  .ts-card {
+    width: 85vw; /* Responsive width */
+    max-width: 340px; /* Cap the width so it doesn't get too huge */
+    flex-direction: column; 
+    text-align: center;
+    padding: 2rem 1.25rem; /* Slightly reduced padding to maximize space for text */
+  }
+  .ts-info {
+    align-items: center;
+  }
+  .ts-info-top {
+    align-items: center;
+  }
+  .ts-avatar-wrapper {
+    width: 75px;
+    height: 75px;
   }
 }

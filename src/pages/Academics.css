@@ -1,0 +1,118 @@
+/* Academics.css - Creative Hero Section */
+.academics-page {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.academics-hero {
+  position: relative;
+  padding: 8rem 2rem 6rem;
+  background: linear-gradient(135deg, #1b4a83 0%, #1a365d 100%);
+  border-radius: 0 0 50px 50px;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 20px 40px rgba(27, 74, 131, 0.2);
+}
+
+.academics-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.academics-subtitle {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #f7cd55;
+  background: rgba(247, 205, 85, 0.15);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.academics-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.academics-desc {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Creative Floating Shapes */
+.academics-hero-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.6;
+  animation: float-shape 10s infinite alternate ease-in-out;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background-color: #e7612f;
+  top: -100px;
+  left: -50px;
+}
+
+.shape-2 {
+  width: 400px;
+  height: 400px;
+  background-color: #3b82f6;
+  bottom: -150px;
+  right: -100px;
+  animation-delay: -5s;
+}
+
+.shape-3 {
+  width: 200px;
+  height: 200px;
+  background-color: #f7cd55;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-duration: 15s;
+}
+
+@keyframes float-shape {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, 40px) scale(1.1); }
+}
+
+@media (max-width: 768px) {
+  .academics-hero {
+    padding: 6rem 1.5rem 4rem;
+    border-radius: 0 0 30px 30px;
+  }
+  .academics-title {
+    font-size: 2.5rem;
+  }
+  .academics-desc {
+    font-size: 1.05rem;
+  }
+}

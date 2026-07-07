@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MessageCircle, Send } from 'lucide-react';
+import ScrollReveal from '../components/ScrollReveal';
 import './Contact.css';
 
 const Contact = () => {
@@ -42,7 +43,7 @@ const Contact = () => {
 
       <div className="contact-split-page">
         {/* Left Half: Info */}
-      <div className="contact-half info-half bg-eduneo-blue">
+      <ScrollReveal direction="left" className="contact-half info-half bg-eduneo-blue">
         <div className="half-content-wrapper">
           <span className="contact-subtitle-split text-yellow">Get In Touch</span>
           <h1 className="contact-title-split text-white">Let's Start Your Journey.</h1>
@@ -82,10 +83,10 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </ScrollReveal>
 
       {/* Right Half: Form */}
-      <div className="contact-half form-half bg-white">
+      <ScrollReveal direction="right" className="contact-half form-half bg-white">
         <div className="half-content-wrapper form-wrapper">
           <h3 className="form-split-title">Send us a Message</h3>
           
@@ -182,7 +183,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
-      </div>
+      </ScrollReveal>
     </div>
     </div>
   );

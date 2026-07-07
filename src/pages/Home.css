@@ -34,6 +34,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -197,7 +198,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   transition: transform 0.3s ease;
 }
@@ -222,7 +223,7 @@
   left: -50px;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(0,180,216,0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.05) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -258,7 +259,7 @@
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border-radius: 25px;
   background: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   position: relative;
 }
 
@@ -278,7 +279,7 @@
 }
 
 .icon-item:hover .icon-wrapper-outline {
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .icon-item:hover .icon-wrapper-outline::after {
@@ -288,7 +289,9 @@
 }
 
 @keyframes rotateDashed {
-  100% { transform: scale(1) rotate(360deg); }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
 }
 
 .icon-item h3 {
@@ -300,12 +303,29 @@
   text-transform: uppercase;
 }
 
-.color-cyan { color: #00b4d8; }
-.color-pink { color: #f72585; }
-.color-orange { color: #f8961e; }
-.color-blue { color: #4361ee; }
-.color-red { color: #e63946; }
-.color-yellow { color: #ffb703; }
+.color-cyan {
+  color: #00b4d8;
+}
+
+.color-pink {
+  color: #f72585;
+}
+
+.color-orange {
+  color: #f8961e;
+}
+
+.color-blue {
+  color: #4361ee;
+}
+
+.color-red {
+  color: #e63946;
+}
+
+.color-yellow {
+  color: #ffb703;
+}
 
 /* Higher Secondary Section Styles */
 .hs-section {
@@ -314,17 +334,17 @@
 }
 
 .academic-card {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
 }
 
 .academic-card:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-5px);
 }
 
@@ -393,8 +413,13 @@
   margin-bottom: 1.5rem;
 }
 
-.bg-primary-light { background: #DBEAFE; }
-.bg-secondary-light { background: #EDE9FE; }
+.bg-primary-light {
+  background: #DBEAFE;
+}
+
+.bg-secondary-light {
+  background: #EDE9FE;
+}
 
 .feature-card h3 {
   margin-bottom: 1rem;
@@ -404,7 +429,8 @@
 /* Learning Journey Section (Colorful & Simple) */
 .journey-section {
   position: relative;
-  background-color: #ffffff; /* Clean white background */
+  background-color: #ffffff;
+  /* Clean white background */
   padding: 6rem 0;
   overflow: hidden;
 }
@@ -412,12 +438,14 @@
 .journey-title {
   font-size: 2.8rem;
   font-weight: 800;
-  color: #1a202c; /* Dark text */
+  color: #1a202c;
+  /* Dark text */
   margin-bottom: 0.5rem;
 }
 
 .journey-title span {
-  color: #e5602b; /* Eduneo Orange */
+  color: #e5602b;
+  /* Eduneo Orange */
 }
 
 .journey-subtitle {
@@ -450,13 +478,14 @@
   height: 70px;
   border-radius: 50%;
   background: #ffffff;
-  color: #1b4a83; /* Eduneo Blue */
+  color: #1b4a83;
+  /* Eduneo Blue */
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
   font-weight: 800;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   border: 3px solid #1b4a83;
 }
@@ -478,13 +507,15 @@
 }
 
 .journey-step:hover h4 {
-  color: #e5602b; /* Eduneo Orange */
+  color: #e5602b;
+  /* Eduneo Orange */
 }
 
 .journey-connector {
   flex: 1;
   height: 4px;
-  background: #e2e8f0; /* Light gray line */
+  background: #e2e8f0;
+  /* Light gray line */
   margin-top: -45px;
   z-index: 1;
 }
@@ -497,7 +528,8 @@
   left: 10%;
   right: 10%;
   height: 4px;
-  background: #1b4a83; /* Eduneo Blue track */
+  background: #1b4a83;
+  /* Eduneo Blue track */
   z-index: 1;
   opacity: 0.15;
 }
@@ -600,51 +632,146 @@
     justify-content: center;
     gap: 2rem;
   }
+
   .journey-connector {
     display: none;
   }
+
   .journey-step {
     width: 30%;
   }
 }
 
-@media (max-width: 768px) {
-  .hero-section .grid {
-    grid-template-columns: 1fr;
+@media (max-width: 968px) {
+  .hero-redesign {
+    display: block;
+    position: relative;
+    min-height: 60vh;
+    background: transparent;
+    overflow: hidden;
+    margin-top: 5rem; /* Separate from navbar */
+    border-radius: 20px; /* Make it look like an isolated block if they want separation */
+  }
+
+  .hero-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 2rem 1.5rem 0 1.5rem; /* Reduced since we have margin-top on hero */
     text-align: center;
   }
-  
-  .hero-content p {
-    margin: 0 auto 2rem;
+
+  .hero-left-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.2); /* More transparent so bg shows */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 1.5rem 1rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    width: 90%; /* Expose more background on the sides */
   }
   
-  .hero-btns {
-    justify-content: center;
+  .hero-left h1 {
+    color: #1b4a83;
+    margin-bottom: 0.5rem;
   }
   
-  .hero-stats {
-    justify-content: center;
-    margin-top: 2rem;
+  .hero-left p {
+    color: #4a5568;
+    font-weight: 600;
+  }
+
+  .hero-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    padding: 0;
+    pointer-events: none;
   }
   
-  .hero-image-wrapper {
-    margin-top: 3rem;
+  .geometric-bg {
+    display: block;
+    z-index: 1;
+    opacity: 1; /* Make background colors clearly visible */
+  }
+
+  .hero-student-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    max-height: 32vh;
+    z-index: 3;
   }
   
-  .stats-section .grid {
-    grid-template-columns: repeat(2, 1fr);
+  .flask-icon {
+    display: none;
   }
 }
 
-@media (max-width: 968px) {
-  .hero-redesign {
+@media (max-width: 768px) {
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-left p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .flask-icon {
+    transform: scale(0.8);
+    margin-top: 1.5rem;
+  }
+
+  .stats-section .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journey-title {
+    font-size: 2rem;
+  }
+  
+  .journey-timeline {
     flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2rem;
+    gap: 0;
   }
-  .hero-left {
-    padding: 7rem 2rem 3rem 2rem;
+
+  .journey-timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 2rem;
+    width: 4px;
+    height: 100%;
+    margin-left: 33px; /* Center with the 70px circles */
   }
-  .hero-right {
-    min-height: 50vh;
+
+  .journey-step {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+  }
+
+  .journey-step h4 {
+    text-align: left;
+    margin-top: 0;
   }
 }
 
@@ -652,12 +779,16 @@
   .stats-section .grid {
     grid-template-columns: 1fr;
   }
-  
-  .journey-step {
-    width: 45%;
-  }
 
   .hero-left {
-    padding: 6rem 1.5rem 2rem 1.5rem;
+    padding: 2rem 1rem 3rem 1rem;
+  }
+  
+  .journey-timeline {
+    padding-left: 1rem;
+  }
+  
+  .journey-timeline::before {
+    left: 1rem;
   }
 }

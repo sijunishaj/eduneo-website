@@ -28,13 +28,19 @@ const Navbar = () => {
           <img src="/eduneo-logo.png" alt="Eduneo Logo" className="logo-image" />
         </Link>
 
+        <div 
+          className={`mobile-overlay ${isMobileMenuOpen ? 'mobile-overlay-open' : ''}`}
+          onClick={() => setIsMobileMenuOpen(false)}
+          aria-hidden="true"
+        ></div>
+
         <nav className={`navbar-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           <NavLink to="/" end>Home</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/courses">Explore Courses</NavLink>
           <NavLink to="/classes">Base Classes</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          
+
 
         </nav>
 
@@ -42,12 +48,12 @@ const Navbar = () => {
           <Link to="/courses" className="btn btn-navbar-cta">Enrol Now</Link>
         </div>
 
-        <button 
-          className="mobile-menu-btn" 
+        <button
+          className="mobile-menu-btn"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Menu"
         >
-          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
     </header>
