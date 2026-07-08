@@ -31,27 +31,16 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="footer-col">
-              <h3 className="footer-title">Company</h3>
+              <h3 className="footer-title">Quick Links</h3>
               <ul className="footer-links">
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
-                <li><Link to="/teachers">Our Educators</Link></li>
-                <li><Link to="/careers">Careers</Link></li>
-                <li><Link to="/press">Press & Media</Link></li>
-                <li><Link to="/reviews">Reviews & Testimonials</Link></li>
+                <li><Link to="/academics">Academics</Link></li>
+                <li><Link to="/courses">Courses</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>
 
-            {/* Courses */}
-            <div className="footer-col">
-              <h3 className="footer-title">Popular Courses</h3>
-              <ul className="footer-links">
-                <li><Link to="/courses">Spoken English</Link></li>
-                <li><Link to="/courses">Personality Development</Link></li>
-                <li><Link to="/courses">Vedic Maths</Link></li>
-                <li><Link to="/courses">CBSE Curriculum</Link></li>
-                <li><Link to="/courses">Olympiad Prep</Link></li>
-              </ul>
-            </div>
 
             {/* Contact Info */}
             <div className="footer-col contact-col">
@@ -86,8 +75,6 @@ const Footer = () => {
         <div className="container footer-bottom-inner">
           <p>&copy; {new Date().getFullYear()} Eduneo. All rights reserved.</p>
           <div className="footer-legal-links">
-            <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/terms">Terms of Service</Link>
           </div>
         </div>
       </div>

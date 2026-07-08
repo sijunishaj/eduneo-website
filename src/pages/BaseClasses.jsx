@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollReveal from '../components/ScrollReveal';
 import './BaseClasses.css';
 
 const BaseClasses = () => {
@@ -24,74 +25,82 @@ const BaseClasses = () => {
       {/* Full-Width Classes Section */}
       <div className="fw-classes-wrapper">
         <div className="container">
-          <div className="fw-classes-header">
-            <h2>Our Foundation Programs</h2>
-            <p>Step-by-step training to ensure no student is left behind.</p>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="fw-classes-header">
+              <h2>Our Foundation Programs</h2>
+              <p>Step-by-step training to ensure no student is left behind.</p>
+            </div>
+          </ScrollReveal>
         </div>
 
         {/* Class 1 */}
-        <section className="fw-class-section bg-white border-top-blue">
-          <div className="container fw-class-container">
-            <div className="fw-class-left">
-              <h3 className="fw-class-title">Language Basics Training</h3>
-              <div className="fw-class-divider bg-blue"></div>
+        <ScrollReveal direction="up" delay={0.1}>
+          <section className="fw-class-section bg-white border-top-blue">
+            <div className="container fw-class-container">
+              <div className="fw-class-left">
+                <h3 className="fw-class-title">Language Basics Training</h3>
+                <div className="fw-class-divider bg-blue"></div>
+              </div>
+              <div className="fw-class-right">
+                <p className="fw-class-desc">
+                  Designed for students struggling with language comprehension. We start from the absolute alphabet and phonics, slowly building up vocabulary and sentence structure to ensure full confidence in reading and writing.
+                </p>
+                <ul className="fw-class-features">
+                  <li>Alphabet and phonics mastery</li>
+                  <li>Basic vocabulary building</li>
+                  <li>Simple sentence construction</li>
+                  <li>Patient, 1-on-1 reading support</li>
+                </ul>
+              </div>
             </div>
-            <div className="fw-class-right">
-              <p className="fw-class-desc">
-                Designed for students struggling with language comprehension. We start from the absolute alphabet and phonics, slowly building up vocabulary and sentence structure to ensure full confidence in reading and writing.
-              </p>
-              <ul className="fw-class-features">
-                <li>Alphabet and phonics mastery</li>
-                <li>Basic vocabulary building</li>
-                <li>Simple sentence construction</li>
-                <li>Patient, 1-on-1 reading support</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+          </section>
+        </ScrollReveal>
 
         {/* Class 2 */}
-        <section className="fw-class-section bg-light-gray border-top-orange">
-          <div className="container fw-class-container">
-            <div className="fw-class-left">
-              <h3 className="fw-class-title">Primary Foundations (Class 1-5)</h3>
-              <div className="fw-class-divider bg-orange"></div>
+        <ScrollReveal direction="up" delay={0.2}>
+          <section className="fw-class-section bg-light-gray border-top-orange">
+            <div className="container fw-class-container">
+              <div className="fw-class-left">
+                <h3 className="fw-class-title">Primary Foundations (Class 1-5)</h3>
+                <div className="fw-class-divider bg-orange"></div>
+              </div>
+              <div className="fw-class-right">
+                <p className="fw-class-desc">
+                  For young learners who need extra time to grasp core concepts in Math and EVS. We use interactive, visual methods to break down complex ideas into simple, digestible steps.
+                </p>
+                <ul className="fw-class-features">
+                  <li>Visual and hands-on learning</li>
+                  <li>Focus on fundamental arithmetic</li>
+                  <li>Overcoming study anxiety</li>
+                  <li>Regular progress tracking</li>
+                </ul>
+              </div>
             </div>
-            <div className="fw-class-right">
-              <p className="fw-class-desc">
-                For young learners who need extra time to grasp core concepts in Math and EVS. We use interactive, visual methods to break down complex ideas into simple, digestible steps.
-              </p>
-              <ul className="fw-class-features">
-                <li>Visual and hands-on learning</li>
-                <li>Focus on fundamental arithmetic</li>
-                <li>Overcoming study anxiety</li>
-                <li>Regular progress tracking</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+          </section>
+        </ScrollReveal>
 
         {/* Class 3 */}
-        <section className="fw-class-section bg-white border-top-yellow">
-          <div className="container fw-class-container">
-            <div className="fw-class-left">
-              <h3 className="fw-class-title">Bridge Courses (Class 6-8)</h3>
-              <div className="fw-class-divider bg-yellow"></div>
+        <ScrollReveal direction="up" delay={0.3}>
+          <section className="fw-class-section bg-white border-top-yellow">
+            <div className="container fw-class-container">
+              <div className="fw-class-left">
+                <h3 className="fw-class-title">Bridge Courses (Class 6-8)</h3>
+                <div className="fw-class-divider bg-yellow"></div>
+              </div>
+              <div className="fw-class-right">
+                <p className="fw-class-desc">
+                  Bridge the gap between lower and higher classes. If a student is falling behind in Middle School, this course revisits earlier concepts to ensure they are fully prepared for high school curriculums.
+                </p>
+                <ul className="fw-class-features">
+                  <li>Revisiting core concepts</li>
+                  <li>Improving analytical thinking</li>
+                  <li>Language comprehension support</li>
+                  <li>Study skill development</li>
+                </ul>
+              </div>
             </div>
-            <div className="fw-class-right">
-              <p className="fw-class-desc">
-                Bridge the gap between lower and higher classes. If a student is falling behind in Middle School, this course revisits earlier concepts to ensure they are fully prepared for high school curriculums.
-              </p>
-              <ul className="fw-class-features">
-                <li>Revisiting core concepts</li>
-                <li>Improving analytical thinking</li>
-                <li>Language comprehension support</li>
-                <li>Study skill development</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+          </section>
+        </ScrollReveal>
       </div>
     </div>
   );
