@@ -20,7 +20,25 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Thank you for contacting us! We will get back to you shortly.');
+
+    const whatsappNumber = '917034600908';
+
+    const message =
+      `🎓 *New Enquiry - Eduneo*\n\n` +
+      `👤 *Name:* ${formData.name}\n` +
+      `📞 *Mobile:* ${formData.mobile}\n` +
+      `📍 *District:* ${formData.district}\n` +
+      `🏫 *Class:* ${formData.studentClass}\n` +
+      `📚 *Syllabus:* ${formData.syllabus}\n` +
+      `🗣️ *Medium:* ${formData.medium}\n` +
+      (formData.message ? `💬 *Message:* ${formData.message}\n` : '') +
+      `\n_Sent via Eduneo Contact Form_`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, '_blank');
+
     setFormData({ name: '', mobile: '', studentClass: '', syllabus: '', medium: '', district: '', message: '' });
   };
 

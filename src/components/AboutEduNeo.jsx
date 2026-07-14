@@ -1,6 +1,7 @@
 import React from 'react';
 import { Book, Mic, Edit3, MessageSquare, Mic2, FileText, Headphones, PenTool, BookOpen, Pen, BookMarked, Smile, Star, Brain, Eye, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './AboutEduNeo.css';
 
 const AboutEduNeo = () => {
@@ -23,6 +24,30 @@ const AboutEduNeo = () => {
     { icon: Users, label: 'DOUBT CLEARING' }
   ];
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.5, y: 15 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      y: 0,
+      transition: { 
+        type: "spring", 
+        stiffness: 120, 
+        damping: 12 
+      } 
+    }
+  };
+
   return (
     <section className="about-eduneo-section">
       <div className="container mx-auto px-4">
@@ -31,24 +56,45 @@ const AboutEduNeo = () => {
           {/* Left Side: Winding Icon Path */}
           <div className="icon-path-container">
             <svg className="winding-path-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-              <path d="M 12.5 12.5 L 87.5 12.5 A 12.5 12.5 0 0 1 100 25 L 100 25 A 12.5 12.5 0 0 1 87.5 37.5 L 12.5 37.5 A 12.5 12.5 0 0 0 0 50 L 0 50 A 12.5 12.5 0 0 0 12.5 62.5 L 87.5 62.5 A 12.5 12.5 0 0 1 100 75 L 100 75 A 12.5 12.5 0 0 1 87.5 87.5 L 12.5 87.5" fill="none" stroke="#2d4a36" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" />
+              <motion.path 
+                d="M 12.5 12.5 L 87.5 12.5 A 12.5 12.5 0 0 1 100 25 L 100 25 A 12.5 12.5 0 0 1 87.5 37.5 L 12.5 37.5 A 12.5 12.5 0 0 0 0 50 L 0 50 A 12.5 12.5 0 0 0 12.5 62.5 L 87.5 62.5 A 12.5 12.5 0 0 1 100 75 L 100 75 A 12.5 12.5 0 0 1 87.5 87.5 L 12.5 87.5" 
+                fill="none" 
+                stroke="#2d4a36" 
+                strokeWidth="0.5" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 1.8, ease: "easeInOut" }}
+              />
             </svg>
 
-            <div className="icons-grid-4x4">
+            <motion.div 
+              className="icons-grid-4x4"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+            >
               {icons.map((item, index) => {
                 // To match the snake path visually, row 2 and 4 should be reversed in layout
                 // CSS will handle the actual visual reversal or we can do it in flex
                 const Icon = item.icon;
                 return (
-                  <div className="path-icon-item" key={index}>
-                    <div className="path-icon-circle">
+                  <motion.div 
+                    className="path-icon-item hover-parent" 
+                    key={index}
+                    variants={itemVariants}
+                  >
+                    <div className="path-icon-circle hover-bounce">
                       <Icon size={24} strokeWidth={1.5} />
                     </div>
                     <span className="path-icon-label">{item.label}</span>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </div>
+            </motion.div>
           </div>
 
           {/* Right Side: Content */}

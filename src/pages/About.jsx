@@ -76,14 +76,23 @@ const About = () => {
           <div className="container">
             <div className="mvg-minimal-grid">
               <div className="mvg-minimal-card">
+                <div className="mvg-icon-wrapper bg-blue-glow-mvg">
+                  <Target size={36} color="#1b4a83" strokeWidth={1.5} />
+                </div>
                 <h3>Mission</h3>
                 <p>To make premium education accessible, interactive, and personalized for every student, regardless of their grade or syllabus.</p>
               </div>
               <div className="mvg-minimal-card">
+                <div className="mvg-icon-wrapper bg-orange-glow-mvg">
+                  <Lightbulb size={36} color="#e7612f" strokeWidth={1.5} />
+                </div>
                 <h3>Vision</h3>
                 <p>To lead the future of digital education, nurturing creative, analytical, and confident thinkers who are globally competitive.</p>
               </div>
               <div className="mvg-minimal-card">
+                <div className="mvg-icon-wrapper bg-green-glow-mvg">
+                  <Heart size={36} color="#67a775" strokeWidth={1.5} />
+                </div>
                 <h3>Values</h3>
                 <p>Excellence, Integrity, Innovation, Empathy, and a relentless devotion to continuous student improvement.</p>
               </div>

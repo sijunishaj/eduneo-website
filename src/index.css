@@ -448,3 +448,102 @@ img {
     opacity: 0.8;
   }
 }
+
+/* --- Educational Micro-Animations & Interactivity --- */
+
+/* Smooth Card Hover with Lift and Subtle Shadow Glow */
+.card-interactive {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.card-interactive:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 20px 40px rgba(123, 44, 191, 0.08), 
+              0 1px 3px rgba(123, 44, 191, 0.02),
+              0 0 0 1px rgba(123, 44, 191, 0.1) !important;
+}
+
+/* Subtle icon bounce - e.g., Graduation Cap or Book floating */
+.hover-bounce {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card-interactive:hover .hover-bounce,
+.hover-parent:hover .hover-bounce,
+.hover-bounce:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon tilt effect - e.g., pencil writing, gears turning */
+.hover-tilt {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card-interactive:hover .hover-tilt,
+.hover-parent:hover .hover-tilt,
+.hover-tilt:hover {
+  transform: rotate(15deg);
+}
+
+/* Icon spin effect - e.g., stars shining, beakers bubbling */
+.hover-spin-once {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-interactive:hover .hover-spin-once,
+.hover-parent:hover .hover-spin-once,
+.hover-spin-once:hover {
+  transform: rotate(360deg);
+}
+
+/* Text highlight draw-in effect */
+.highlight-draw {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.highlight-draw::before {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: var(--accent-light);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.highlight-draw.in-view::before,
+.hover-parent:hover .highlight-draw::before {
+  transform: scaleX(1);
+}
+
+/* Gentle sway animation for background floating elements */
+@keyframes sway {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.animate-sway {
+  animation: sway 6s ease-in-out infinite;
+}
+
+.animate-sway-delayed-1 {
+  animation: sway 7s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-sway-delayed-2 {
+  animation: sway 8s ease-in-out infinite;
+  animation-delay: 3s;
+}
