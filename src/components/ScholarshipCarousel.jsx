@@ -12,28 +12,46 @@ const banners = [
   }
 ];
 
+const extendedBanners = [...banners, banners[0]];
+
 const ScholarshipCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 5000); // Change image every 5 seconds
+      setTransitionEnabled(true);
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(timer);
   }, []);
 
+  const handleTransitionEnd = () => {
+    if (currentIndex === extendedBanners.length - 1) {
+      setTransitionEnabled(false);
+      setCurrentIndex(0);
+    }
+  };
+
   const goToSlide = (index) => {
+    setTransitionEnabled(true);
     setCurrentIndex(index);
   };
 
+  const activeIndex = currentIndex === extendedBanners.length - 1 ? 0 : currentIndex;
+
   return (
     <div className="scholarship-carousel-container">
-      <div 
+      <div
         className="scholarship-carousel-track"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+          transition: transitionEnabled ? 'transform 0.6s ease-in-out' : 'none'
+        }}
+        onTransitionEnd={handleTransitionEnd}
       >
-        {banners.map((banner, index) => (
+        {extendedBanners.map((banner, index) => (
           <div className="scholarship-slide" key={index}>
             <picture>
               <source media="(max-width: 768px)" srcSet={banner.mobile} />
@@ -48,7 +66,7 @@ const ScholarshipCarousel = () => {
         {banners.map((_, index) => (
           <button
             key={index}
-            className={`scholarship-dot ${index === currentIndex ? 'active' : ''}`}
+            className={`scholarship-dot ${index === activeIndex ? 'active' : ''}`}
             onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
           />

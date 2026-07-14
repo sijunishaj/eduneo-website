@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import PageTransition from './components/PageTransition';
 
 // Pages
 import Home from './pages/Home';
@@ -22,6 +24,7 @@ function ScrollToTop() {
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -40,13 +43,15 @@ function App() {
       <ScrollToTop />
       <Navbar />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/courses" element={<ExploreCourses />} />
-          <Route path="/classes" element={<BaseClasses />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+            <Route path="/about" element={<PageTransition><About /></PageTransition>} />
+            <Route path="/courses" element={<PageTransition><ExploreCourses /></PageTransition>} />
+            <Route path="/classes" element={<PageTransition><BaseClasses /></PageTransition>} />
+            <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+          </Routes>
+        </AnimatePresence>
       </main>
       <Footer />
       {/* Global Floating WhatsApp Button */}
