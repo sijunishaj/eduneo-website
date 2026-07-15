@@ -33,6 +33,9 @@ const Home = () => {
                 <path d="M12 14V21" />
               </svg>
             </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfPkG0oykSYjBJkRv0tJUDUmicr9XAD5wwb-h1mRZfGMwZwcg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className="hero-start-exam-btn animate-fade-in" style={{ animationDelay: '0.7s' }}>
+              Start Your Exam <ChevronRight size={18} />
+            </a>
           </div>
 
           {/* Decorative floating elements */}
