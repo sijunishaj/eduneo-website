@@ -16,6 +16,7 @@
   background-color: #1b4a83;
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 8rem 3rem 2rem 3rem;
@@ -103,6 +104,37 @@
   animation: float 4s ease-in-out infinite;
 }
 
+/* Start Exam Button */
+.hero-start-exam-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #FF5A5F 0%, #e7612f 100%);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(255, 90, 95, 0.4);
+  margin-top: 2rem;
+}
+
+.hero-start-exam-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 90, 95, 0.5);
+  background: linear-gradient(135deg, #E0484D 0%, #d4540a 100%);
+}
+
+.hero-start-exam-btn:active {
+  transform: scale(0.96);
+}
+
 .hero-right {
   flex: 1;
   position: relative;
@@ -185,6 +217,55 @@
   max-height: 500px;
   object-fit: contain;
   margin-bottom: -10px;
+}
+
+/* Mobile Responsive - Hero Section */
+@media (max-width: 768px) {
+  .hero-redesign {
+    flex-direction: column;
+    min-height: auto;
+    position: relative;
+  }
+
+  .hero-left {
+    flex: 1;
+    min-height: auto;
+    padding: 3rem 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .hero-left-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero-start-exam-btn {
+    position: relative;
+    width: auto;
+    max-width: 220px;
+    margin: 1rem auto 0;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.88rem;
+    align-self: center;
+    z-index: 15;
+    white-space: nowrap;
+  }
+
+  .hero-right {
+    flex: 1;
+    min-height: 400px;
+    position: relative;
+  }
+
+  .decor-circle,
+  .decor-star {
+    display: none;
+  }
+
+  .hero-floating-icon {
+    display: none;
+  }
 }
 
 .whatsapp-float {
@@ -956,7 +1037,7 @@
     background-color: transparent;
     padding: 3.5rem 1.5rem 0 1.5rem; /* Balanced for heading + paragraph */
     text-align: center;
-    z-index: 2;
+    z-index: 5;
     align-items: flex-start;
   }
 
@@ -988,6 +1069,19 @@
     font-size: 0.95rem;
     line-height: 1.5;
     margin-top: 0.5rem;
+  }
+
+  .hero-start-exam-btn {
+    position: relative;
+    width: auto;
+    max-width: 240px;
+    margin: 1rem auto 0;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.9rem;
+    left: auto;
+    right: auto;
+    z-index: 15;
+    white-space: nowrap;
   }
 
   .hero-right {
