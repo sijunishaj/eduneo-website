@@ -155,10 +155,10 @@ const ExploreCourses = () => {
                     </div>
 
                     <div className="course-card-footer">
-                      <Link to="/contact" className="course-enroll-btn">
+                      <a href="https://wa.me/917034600908" target="_blank" rel="noopener noreferrer" className="course-enroll-btn">
                         <span>Enrol Now</span>
                         <ArrowRight size={16} />
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </ScrollReveal>

@@ -12,7 +12,7 @@ const CallToAction = () => {
             <p>Join thousands of students from LKG to Class 12 already excelling with Eduneo.</p>
           </div>
           <div className="cta-actions">
-            <Link to="/contact" className="btn-modern btn-primary" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>Book Free Trial</Link>
+            <a href="https://wa.me/917034600908" target="_blank" rel="noopener noreferrer" className="btn-modern btn-primary" style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>Book Free Trial</a>
             <Link to="/contact" className="btn-modern btn-outline" style={{borderColor: 'white', color: 'white', display: 'inline-flex', alignItems: 'center', justifyContent: 'center'}}>Contact Us</Link>
           </div>
         </div>

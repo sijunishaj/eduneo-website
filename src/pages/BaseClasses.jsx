@@ -206,10 +206,10 @@ const BaseClasses = () => {
                     </div>
 
                     <div className="bc-card-footer">
-                      <Link to="/contact" className="bc-enroll-btn">
+                      <a href="https://wa.me/917034600908" target="_blank" rel="noopener noreferrer" className="bc-enroll-btn">
                         <span>Enroll Now</span>
                         <ArrowRight size={16} />
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -256,10 +256,10 @@ const BaseClasses = () => {
                     </div>
 
                     <div className="bc-card-footer">
-                      <Link to="/contact" className="bc-card-btn">
+                      <a href="https://wa.me/917034600908" target="_blank" rel="noopener noreferrer" className="bc-card-btn">
                         <span>Enrol In Program</span>
                         <ArrowRight size={16} />
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </ScrollReveal>
@@ -301,9 +301,9 @@ const BaseClasses = () => {
             <h2>Ready to Build a Strong Academic Foundation?</h2>
             <p>Book a free consultation or 3-day demo class to experience our personalized teaching approach.</p>
             <div className="bc-cta-actions">
-              <Link to="/contact" className="btn btn-cta-primary">
+              <a href="https://wa.me/917034600908" target="_blank" rel="noopener noreferrer" className="btn btn-cta-primary">
                 Book Free Trial Class
-              </Link>
+              </a>
               <a 
                 href="https://wa.me/917034600908?text=I%20would%20like%20to%20know%20more%20about%20EduNeo%20Base%20Classes" 
                 target="_blank" 

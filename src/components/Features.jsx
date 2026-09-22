@@ -39,7 +39,7 @@ const Features = () => {
               <p>
                 We carefully select highly qualified and experienced teachers. Along with expert teaching, every student receives dedicated mentor support, helping them stay motivated, focused, and confident throughout their academic journey from LKG to Class 12.
               </p>
-              <Link to="/contact" className="btn-modern btn-primary mt-4" style={{display: 'inline-block'}}>Book Your Free Trial</Link>
+              <a href="https://wa.me/917034600908" target="_blank" rel="noopener noreferrer" className="btn-modern btn-primary mt-4" style={{display: 'inline-block'}}>Book Your Free Trial</a>
             </div>
           </div>
         </div>
