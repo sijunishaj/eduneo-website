@@ -56,12 +56,12 @@ const Navbar = () => {
           <NavLink to="/classes">Base Classes</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <div className="mobile-cta-wrapper">
-            <Link to="/courses" className="btn btn-navbar-cta mobile-cta-btn" onClick={() => setIsMobileMenuOpen(false)}>Enrol Now</Link>
+            <a href="https://wa.me/917034600908" target="_blank" rel="noopener noreferrer" className="btn btn-navbar-cta mobile-cta-btn" onClick={() => setIsMobileMenuOpen(false)}>Enrol Now</a>
           </div>
         </nav>
 
         <div className="navbar-cta">
-          <Link to="/courses" className="btn btn-navbar-cta">Enrol Now</Link>
+          <a href="https://wa.me/917034600908" target="_blank" rel="noopener noreferrer" className="btn btn-navbar-cta">Enrol Now</a>
         </div>
 
         <button

@@ -22,9 +22,9 @@ const Hero = () => {
             Live interactive classes for LKG to Grade 12. Expert teachers, dedicated mentor support, and flexible batch options tailored to your child's success.
           </p>
           <div className="hero-ctas">
-            <Link to="/contact" className="btn-modern btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+            <a href="https://wa.me/917034600908" target="_blank" rel="noopener noreferrer" className="btn-modern btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
               Book Your Free Trial <ChevronRight size={18} />
-            </Link>
+            </a>
             <Link to="/courses" className="btn-modern btn-white" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
               Explore Courses
             </Link>

@@ -153,7 +153,7 @@ const AboutEduNeo = () => {
               Our classes are conducted as live interactive sessions, allowing students to actively participate, ask questions, and engage with teachers in real time. We provide both One-Teacher Programs and Batch-Wise Classes, enabling students to choose the learning method that suits them best.
             </p>
 
-            <Link to="/contact" className="book-trial-btn" style={{ display: 'inline-block', textAlign: 'center' }}>BOOK YOUR FREE TRIAL</Link>
+            <a href="https://wa.me/917034600908" target="_blank" rel="noopener noreferrer" className="book-trial-btn" style={{ display: 'inline-block', textAlign: 'center' }}>BOOK YOUR FREE TRIAL</a>
           </div>
         </div>
       </div>

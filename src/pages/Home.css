@@ -335,9 +335,11 @@
   .icon-row {
     gap: 1.25rem 0.75rem;
   }
+
   .icon-item {
     width: 130px;
   }
+
   .icon-wrapper-outline {
     width: 72px;
     height: 72px;
@@ -636,12 +638,29 @@
   box-shadow: 0 12px 30px rgba(38, 71, 144, 0.2);
 }
 
-.bg-blue-light   { background: #dbeafe; }
-.bg-green-light  { background: #d1fae5; }
-.bg-yellow-light { background: #fef3c7; }
-.bg-purple-light { background: #ede9fe; }
-.bg-teal-light   { background: #ccfbf1; }
-.bg-orange-light { background: #ffedd5; }
+.bg-blue-light {
+  background: #dbeafe;
+}
+
+.bg-green-light {
+  background: #d1fae5;
+}
+
+.bg-yellow-light {
+  background: #fef3c7;
+}
+
+.bg-purple-light {
+  background: #ede9fe;
+}
+
+.bg-teal-light {
+  background: #ccfbf1;
+}
+
+.bg-orange-light {
+  background: #ffedd5;
+}
 
 /* Step Card Title */
 .step-card-title {
@@ -738,12 +757,12 @@
   }
 }
 
-  /* ---- Hide ALL horizontal & vertical connector SVGs on mobile ---- */
-  .arrow-horizontal,
-  .journey-vertical-connector,
-  .arrow-mobile-down {
-    display: none;
-  }
+/* ---- Hide ALL horizontal & vertical connector SVGs on mobile ---- */
+.arrow-horizontal,
+.journey-vertical-connector,
+.arrow-mobile-down {
+  display: none;
+}
 
 @media (max-width: 400px) {
   .journey-step-card {
@@ -751,7 +770,8 @@
   }
 
   .journey-step-card::before {
-    left: 24px; /* Center of 48px icon */
+    left: 24px;
+    /* Center of 48px icon */
   }
 
   .journey-step-card .step-icon-circle {
@@ -760,14 +780,23 @@
   }
 
   .journey-step-card .step-number-badge {
-    left: 4rem; /* 48px + 16px gap */
+    left: 4rem;
+    /* 48px + 16px gap */
   }
 }
 
 /* Legacy — keep desktop styles for old .journey-timeline if still referenced */
-.journey-timeline { display: none; }
-.journey-connector { display: none; }
-.step-number { display: none; }
+.journey-timeline {
+  display: none;
+}
+
+.journey-connector {
+  display: none;
+}
+
+.step-number {
+  display: none;
+}
 
 /* Stats Section */
 .stats-section {
@@ -862,44 +891,82 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+
   /* Scale circle down on tablets */
   .journey-circle-wrapper {
     width: 420px;
     height: 420px;
   }
+
   .journey-center-hub {
     width: 130px;
     height: 130px;
   }
-  .hub-title { font-size: 0.9rem; }
-  .step-icon-circle { width: 68px; height: 68px; }
-  .journey-circle-step { width: 110px; }
+
+  .hub-title {
+    font-size: 0.9rem;
+  }
+
+  .step-icon-circle {
+    width: 68px;
+    height: 68px;
+  }
+
+  .journey-circle-step {
+    width: 110px;
+  }
 }
 
 @media (max-width: 600px) {
+
   /* Scale down to fit mobile screens */
   .journey-circle-wrapper {
     width: 340px;
     height: 340px;
   }
+
   .journey-center-hub {
     width: 110px;
     height: 110px;
   }
-  .hub-title { font-size: 0.75rem; }
-  .hub-tagline { font-size: 0.48rem; }
-  .step-icon-circle { width: 55px; height: 55px; }
-  .step-icon-circle svg { width: 26px; height: 26px; }
-  .journey-circle-step { width: 90px; }
-  .step-label-num { font-size: 0.6rem; }
-  .step-desc { font-size: 0.65rem; }
+
+  .hub-title {
+    font-size: 0.75rem;
+  }
+
+  .hub-tagline {
+    font-size: 0.48rem;
+  }
+
+  .step-icon-circle {
+    width: 55px;
+    height: 55px;
+  }
+
+  .step-icon-circle svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .journey-circle-step {
+    width: 90px;
+  }
+
+  .step-label-num {
+    font-size: 0.6rem;
+  }
+
+  .step-desc {
+    font-size: 0.65rem;
+  }
 }
 
 @media (max-width: 968px) {
   .hero-redesign {
     display: block;
     position: relative;
-    min-height: 85vh; /* Increased to give plenty of space for image and text */
+    min-height: 85vh;
+    /* Increased to give plenty of space for image and text */
     background: transparent;
     overflow: hidden;
     margin-top: 5rem;
@@ -915,7 +982,8 @@
     width: 100%;
     height: 100%;
     background-color: transparent;
-    padding: 3.5rem 1.5rem 0 1.5rem; /* Balanced for heading + paragraph */
+    padding: 3.5rem 1.5rem 0 1.5rem;
+    /* Balanced for heading + paragraph */
     text-align: center;
     z-index: 5;
     align-items: flex-start;
@@ -928,13 +996,17 @@
     align-items: center;
     position: relative;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.35); /* Increased opacity for modern premium look */
-    backdrop-filter: blur(12px); /* Higher blur for a sleek glassmorphism */
+    background: rgba(255, 255, 255, 0.35);
+    /* Increased opacity for modern premium look */
+    backdrop-filter: blur(12px);
+    /* Higher blur for a sleek glassmorphism */
     -webkit-backdrop-filter: blur(12px);
     padding: 1.5rem 1rem;
     border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.9); /* Sharper edges */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Deeper, softer shadow */
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    /* Sharper edges */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    /* Deeper, softer shadow */
     width: 90%;
   }
 
@@ -988,7 +1060,8 @@
     left: 50%;
     transform: translateX(-50%);
     height: auto;
-    max-height: 48vh; /* Balanced to sit cleanly below card */
+    max-height: 48vh;
+    /* Balanced to sit cleanly below card */
     z-index: 3;
     opacity: 1;
   }

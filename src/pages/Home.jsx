@@ -64,13 +64,13 @@ const Home = () => {
           </div>
           <picture>
             <source srcSet="/boy-student.webp" type="image/webp" />
-            <img 
-              src="/boy-student.png" 
-              alt="Student" 
-              className="hero-student-img" 
+            <img
+              src="/boy-student.png"
+              alt="Student"
+              className="hero-student-img"
               loading="eager"
               fetchPriority="high"
-              decoding="async" 
+              decoding="async"
             />
           </picture>
 
